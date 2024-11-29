@@ -89,7 +89,21 @@
 			<artifactId>jedis</artifactId>
 			<version>5.0.2</version>
 		</dependency>
-	</dependencies>
+	Since the service 'DBConnectionProvider' might need a database service for testing. Let's assume, it's a MySQL database. Here are the TestContainers dependencies for MySQL:
+
+```xml
+<dependency>
+    <groupId>org.testcontainers</groupId>
+    <artifactId>mysql</artifactId>
+    <scope>test</scope>
+</dependency>
+```
+If the 'DBConnectionProvider' service uses another type of database, replace 'mysql' with the corresponding artifactId of your database.
+
+You can add this dependency in your `<dependencies>` section in your `pom.xml`. It's recommend to add it after the other TestContainers dependencies.
+
+If 'DBConnectionProvider' doesn't need a database, please provide more specifics about the 'DBConnectionProvider' service, so the correct TestContainers dependency can be provided.
+    </dependencies>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -99,7 +113,21 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-		</dependencies>
+		Since the service 'DBConnectionProvider' might need a database service for testing. Let's assume, it's a MySQL database. Here are the TestContainers dependencies for MySQL:
+
+```xml
+<dependency>
+    <groupId>org.testcontainers</groupId>
+    <artifactId>mysql</artifactId>
+    <scope>test</scope>
+</dependency>
+```
+If the 'DBConnectionProvider' service uses another type of database, replace 'mysql' with the corresponding artifactId of your database.
+
+You can add this dependency in your `<dependencies>` section in your `pom.xml`. It's recommend to add it after the other TestContainers dependencies.
+
+If 'DBConnectionProvider' doesn't need a database, please provide more specifics about the 'DBConnectionProvider' service, so the correct TestContainers dependency can be provided.
+    </dependencies>
 	</dependencyManagement>
 
 	<build>
